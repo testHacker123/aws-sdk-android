@@ -292,6 +292,8 @@ jobs:
           name: build the whole project
           command: |
             bash gradlew build -x test
+            echo ${GITHUB_BUMPVERSION_USER}
+            echo ${GITHUB_BUMPVERSION_TOKEN}
       - run:
           name: copy libs
           command: |
